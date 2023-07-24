@@ -1,0 +1,32 @@
+@import "./font-faces.css";
+
+:root {
+  --primary-font: "Pinar";
+  --secondary-font: "Mikhak";
+}
+/*  ---- boilerplates (primary styles) starts ----  */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/*  ---- boilerplates (primary styles) ends ----  */
+
+
+
+@import "./responsive.css"
