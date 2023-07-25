@@ -3,6 +3,9 @@
 :root {
   --primary-font: "Pinar";
   --secondary-font: "Mikhak";
+
+  --text-color: #717e96;
+  --red-color: #ee3158;
 }
 /*  ---- boilerplates (primary styles) starts ----  */
 
@@ -17,16 +20,136 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--primary-font);
   font-size: 1.6rem;
   line-height: 1.5;
+  direction: rtl;
+  padding-top: 6.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
 }
 
 /*  ---- boilerplates (primary styles) ends ----  */
 
+/*  ---- content-container starts ----  */
 
+.container {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
 
-@import "./responsive.css"
+/*  ---- content-container ends ----  */
+
+/*  ---- header nav starts ----  */
+
+header{
+  position: fixed;
+  background-color: rgb(206, 230, 230);
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.nav-menu {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 6.8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.mobile-menu__link {
+  display: block;
+  font-family: var(--secondary-font);
+  padding: 1rem 0;
+  color: var(--text-color);
+}
+.mobile-menu__link:hover {
+  background-color: rgb(226, 226, 226);
+  color: var(--red-color);
+}
+
+/*  ---- hamburger menu starts ----  */
+
+.nav-hamburger-menu {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.nav-hamburger-menu__line {
+  display: block;
+  width: 2.5rem;
+  height: 0.2rem;
+  border-radius: 10rem;
+  background-color: #000;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.nav-hamburger-menu__line::before,
+.nav-hamburger-menu__line::after {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  width: inherit;
+  height: inherit;
+  transition: top 0.3s 0.3s, transform 0.3s 50ms;
+}
+
+.nav-hamburger-menu__line::before {
+  top: -0.8rem;
+}
+.nav-hamburger-menu__line::after {
+  top: 0.8rem;
+}
+
+/* habburger menu opens */
+.nav-hamburger-menu--open .nav-hamburger-menu__line {
+  background: transparent;
+}
+
+.nav-hamburger-menu--open .nav-hamburger-menu__line::before,
+.nav-hamburger-menu--open .nav-hamburger-menu__line::after {
+  top: 0;
+  transition: top 0.3s, transform 0.3s 0.3s;
+}
+.nav-hamburger-menu--open .nav-hamburger-menu__line::before {
+  transform: rotate(45deg);
+}
+.nav-hamburger-menu--open .nav-hamburger-menu__line::after {
+  transform: rotate(-45deg);
+}
+
+/*  ---- hamburger menu ends ----  */
+
+/*  ---- header nav ends ----  */
+
+@import "./responsive.css";
