@@ -107,3 +107,19 @@
 }
 
 /*  ---- home ends ----  */
+
+/*  ---- about us starts ----  */
+@media (min-width: 992px) {
+  .about-us__content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-us__image {
+    flex-basis: 40%;
+    order: 0;
+  }
+  .about-us__description {
+    flex-basis: 60%;
+  }
+}
+/*  ---- about us ends ----  */

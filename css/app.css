@@ -92,6 +92,29 @@ img {
 
 /*  ---- content-container ends ----  */
 
+/*  ---- component styles starts ----  */
+.section-header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.section-header__caption {
+  color: var(--red-color);
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+.section-header__title {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+.section-header__line {
+  display: block;
+  width: 8rem;
+  height: 0.2rem;
+  background-color: var(--red-color);
+  margin: auto;
+}
+/*  ---- component styles ends ----  */
+
 /*  ---- header nav starts ----  */
 
 header {
@@ -219,5 +242,23 @@ header {
 }
 
 /*  ---- home ends ----  */
+
+/*  ---- about us starts ----  */
+
+
+  .about-us__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us__image {
+    flex-basis: 40%;
+    order: 1;
+  }
+  .about-us__description {
+    flex-basis: 60%;
+    margin-bottom: 5rem;
+  }
+
+/*  ---- about us ends ----  */
 
 @import "./responsive.css";
