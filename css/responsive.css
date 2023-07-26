@@ -109,6 +109,40 @@
 /*  ---- home ends ----  */
 
 /*  ---- about us starts ----  */
+@media (min-width: 576px) {
+  .process-box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .process-box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .about-us__process {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .process-box {
+    flex-basis: 49% !important;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 992px) {
+  .about-us__process {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .process-box {
+    flex-basis: 23.3% !important;
+  }
+  .process-box--fill {
+    transform: translateY(4rem);
+  }
+}
+
 @media (min-width: 992px) {
   .about-us__content {
     flex-direction: row;
