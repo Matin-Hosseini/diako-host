@@ -7,3 +7,8 @@
   font-family: "Pinar";
   src: url("./../assets/fonts/Pinar/Pinar-DS1.ttf");
 }
+
+@font-face {
+  font-family: "Mikhak-extra-bold";
+  src: url("./../assets/fonts/Mikhak/Statics/Mikhak-ExtraBold.ttf");
+}

@@ -157,3 +157,24 @@
   }
 }
 /*  ---- about us ends ----  */
+
+/*  ---- services starts ----  */
+@media (min-width: 768px) {
+  .services__boxes {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  .services__box {
+    flex-basis: 48%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .services__box {
+    flex-basis: 31%;
+    margin-bottom: 0;
+    height: 20rem;
+  }
+}
+/*  ---- services ends ----  */
