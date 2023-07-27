@@ -178,3 +178,37 @@
   }
 }
 /*  ---- services ends ----  */
+
+/*  ---- resume starts ----  */
+
+/*  ---- funfacts starts ----  */
+@media (min-width: 576px) {
+  .funfact {
+    flex-basis: 50%;
+    margin-bottom: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .funfact {
+    flex-basis: 25%;
+    margin: 0;
+  }
+  .funfact::before,
+  .funfact::after {
+    position: absolute;
+    content: "";
+    width: 0.2rem;
+    height: 20rem;
+    background-color: #fff;
+    transition: all var(--transition-2);
+  }
+  .funfact::before {
+    top: -23rem;
+  }
+  .funfact::after {
+    top: 17rem;
+  }
+}
+/*  ---- funfacts ends ----  */
+
+/*  ---- resume ends ----  */

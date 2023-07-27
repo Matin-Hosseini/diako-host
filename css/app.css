@@ -12,6 +12,7 @@
   --button-color: #ee3158;
 
   --transition: 0.2s ease-in-out;
+  --transition-2: 0.3s ease-in-out;
 }
 /*  ---- boilerplates (primary styles) starts ----  */
 
@@ -349,5 +350,81 @@ header {
   color: #fff;
 }
 /*  ---- services  ends ----  */
+
+/*  ---- resume  starts ----  */
+
+/*  ---- funfacts  starts ----  */
+.resume__funfacts {
+  margin: 10rem 0;
+  background-image: url("./../assets/images/resume-fix-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 10rem 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.resume__funfacts::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #151620;
+  opacity: 0.7;
+}
+.funfact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  cursor: pointer;
+  transition: all var(--transition-2);
+  margin: 3rem 0;
+}
+
+.funfact__icon {
+  color: #fff;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: all var(--transition-2);
+}
+.funfact__amount {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: #fff;
+  margin: 2rem 0;
+}
+.funfact__title {
+  color: #fff;
+}
+
+.funfact:hover {
+  transform: translateY(-1rem);
+}
+
+.funfact:hover .funfact__icon {
+  background-color: #fff;
+  color: #000;
+}
+.funfact:hover::before {
+  top: -50rem;
+}
+.funfact:hover::after {
+  top: 50rem;
+}
+
+/*  ---- funfacts  ends ----  */
+
+/*  ---- resume  ends ----  */
 
 @import "./responsive.css";
