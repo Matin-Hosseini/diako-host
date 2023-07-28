@@ -12,3 +12,8 @@
   font-family: "Mikhak-extra-bold";
   src: url("./../assets/fonts/Mikhak/Statics/Mikhak-ExtraBold.ttf");
 }
+
+@font-face {
+  font-family: "mickak-black";
+  src: url("./../assets/fonts/Mikhak/Statics/Mikhak-Black.ttf");
+}
