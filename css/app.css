@@ -66,6 +66,7 @@ img {
   font-family: var(--secondary-font);
   border-radius: 0.5rem;
   transition: all var(--transition);
+  cursor: pointer;
 }
 .btn:hover {
   color: #fff;
@@ -475,9 +476,80 @@ header {
   border-right: 2px solid var(--text-color);
   height: 0;
   overflow: hidden;
-  transition: all var(--transition)
+  transition: all var(--transition);
 }
 /*  ---- accordion  ends ----  */
 /*  ---- q-and-a  ends ----  */
+
+/*  ---- contact us  starts ----  */
+
+.contact-us {
+}
+.contact-us__caption {
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: var(--text-color);
+  padding: 0 2rem;
+  margin-bottom: 5rem;
+}
+
+.contact-us__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contact-us__form input,
+.contact-us__form textarea {
+  padding: 1.5rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid var(--dark-blue);
+  border-radius: 1rem;
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  position: relative;
+}
+.contact-us__form input {
+  flex-basis: 32.7%;
+  flex: 1;
+}
+.contact-us__form textarea {
+  flex-basis: 100%;
+}
+.contact-us__submit-btn {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.contact-us__boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.contact-us__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0.5rem;
+  flex-basis: 100%;
+  height: 18.5rem;
+}
+.contact-us__icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue);
+}
+.contact-us__info {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/*  ---- contact us  ends ----  */
 
 @import "./responsive.css";

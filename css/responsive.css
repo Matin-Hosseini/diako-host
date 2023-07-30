@@ -212,3 +212,18 @@
 /*  ---- funfacts ends ----  */
 
 /*  ---- resume ends ----  */
+
+/*  ---- contact-us starts ----  */
+
+@media (min-width: 576px) {
+  .contact-us__box {
+    flex-basis: 49%;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us__box {
+    flex-basis: 32.3%;
+  }
+}
+
+/*  ---- contact-us ends ----  */
