@@ -82,6 +82,19 @@ img {
   color: var(--button-color);
 }
 
+/*  ---- scroll bar ends ----  */
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #415678b2;
+}
+/*  ---- scroll bar ends ----  */
+
 /*  ---- boilerplates (primary styles) ends ----  */
 
 /*  ---- content-container starts ----  */
