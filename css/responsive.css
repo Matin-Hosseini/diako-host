@@ -227,3 +227,34 @@
 }
 
 /*  ---- contact-us ends ----  */
+
+/*  ---- price starts ----  */
+@media (min-width: 768px) {
+  .price-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .price-box {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .price-box--recommanded {
+    border: 1px solid var(--red-color);
+  }
+  .price-boxes {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .price-boxes {
+    gap: 2rem;
+  }
+  .price-box {
+    flex: 1;
+  }
+}
+/*  ---- price ends ----  */
