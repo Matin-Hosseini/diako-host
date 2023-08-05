@@ -4,8 +4,11 @@
   --primary-font: "Pinar";
   --secondary-font: "Mikhak";
 
+  --app-bg-color: #f9f9f9;
   --primary-color: #415678;
-  --text-color: #717e96;
+  --title-color: #505050;
+  /* --text-color: #717e96; */
+  --text-color: #505050;
   --red-color: #ee3158;
   --dark-color: #020312;
   --dark-blue: #003379;
@@ -14,6 +17,13 @@
 
   --transition: 0.2s ease-in-out;
   --transition-2: 0.3s ease-in-out;
+}
+
+:root.dark {
+  --app-bg-color: #17202a;
+  --primary-color: #65aab5;
+  --title-color: #00ccff;
+  --text-color: #c0c0c0;
 }
 /*  ---- boilerplates (primary styles) starts ----  */
 
@@ -37,6 +47,8 @@ body {
   line-height: 1.5;
   direction: rtl;
   padding-top: 6.5rem;
+  background: var(--app-bg-color);
+  transition: background-color var(--transition);
 }
 
 a {
@@ -63,8 +75,8 @@ section {
 }
 
 .btn {
-  border: 1px solid var(--button-color);
-  color: var(--button-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   padding: 0.6rem 2rem;
   font-family: var(--secondary-font);
   border-radius: 0.5rem;
@@ -74,16 +86,16 @@ section {
 }
 .btn:hover {
   color: #fff;
-  background-color: var(--button-color);
+  background-color: var(--primary-color);
 }
 .btn-fill {
-  background-color: var(--button-color);
+  background-color: var(--primary-color);
   color: #fff;
   transition: all var(--transition);
 }
 .btn-fill:hover {
   background-color: #fff;
-  color: var(--button-color);
+  color: var(--primary-color);
 }
 
 /*  ---- scroll bar ends ----  */
@@ -127,6 +139,7 @@ section {
 .section-header__title {
   font-size: 3rem;
   margin: 2rem 0;
+  color: var(--title-color);
 }
 .section-header__line {
   display: block;
@@ -137,11 +150,105 @@ section {
 }
 /*  ---- component styles ends ----  */
 
+/*  ---- settings starts ----  */
+.settings {
+  position: fixed;
+  z-index: 99;
+  right: -15rem;
+  top: 20rem;
+  display: flex;
+  align-items: start;
+  flex-direction: row-reverse;
+  font-family: var(--secondary-font);
+  transition: all var(--transition);
+}
+.setting__menu {
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 1rem;
+  width: 15rem;
+  text-align: center;
+  transition: all var(--transition);
+}
+.settings.open {
+  right: 0;
+}
+.setting__gear-icon-container {
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  border-radius: 1rem 0 0 1rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.setting__icon {
+  font-size: 3rem;
+  color: #fff;
+}
+.fa-gear {
+  animation: rotate 3s linear infinite;
+}
+.theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+#dark-mode-btn {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  font-size: 2.5rem;
+  place-content: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin: 1rem 0;
+}
+#dark-mode-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.theme__icon:hover {
+  background-color: #000;
+  color: #fff;
+}
+.coller-pallets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.coller-pallets span {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*  ---- settings ends ----  */
+
 /*  ---- header nav starts ----  */
 
 .header {
   position: fixed;
-  background-color: rgb(206, 230, 230);
+  background-color: #d8d9da;
   left: 0;
   right: 0;
   top: 0;
@@ -256,6 +363,7 @@ section {
 
 .home__title {
   font-size: 4rem;
+  color: var(--title-color);
 }
 .home__caption {
   margin: 3rem 0;
@@ -301,16 +409,16 @@ section {
 .process-box__title {
   font-size: 2.5rem;
   margin: 1rem 0;
-  color: var(--dark-color);
+  color: var(--title-color);
 }
 .process-box__caption {
   font-size: 1.8rem;
   font-family: var(--secondary-font);
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .process-box:hover {
-  background-color: var(--primary-color);
+  background-color: #8f246b;
 }
 .process-box:hover * {
   color: #fff;
@@ -318,7 +426,7 @@ section {
 
 /*process box fill*/
 .process-box--fill {
-  background-color: var(--primary-color);
+  background-color: #8f246b;
 }
 .process-box--fill * {
   color: #fff;
@@ -347,7 +455,7 @@ section {
 .services__title {
   font-family: "Mikhak-extra-bold";
   margin: 2rem 0;
-  color: #003379;
+  color: var(--title-color);
   font-size: 2rem;
 }
 .services__caption {
@@ -577,11 +685,11 @@ section {
 .contact-us__icon {
   font-size: 4rem;
   margin-bottom: 2rem;
-  color: var(--dark-blue);
+  color: var(--primary-color);
 }
 .contact-us__info {
   font-family: var(--secondary-font);
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.5rem;
 }
 
@@ -606,7 +714,7 @@ section {
 }
 .price-box__title {
   font-size: 2.5rem;
-  color: var(--dark-blue);
+  color: var(--title-color);
   margin: 2rem 0;
 }
 .price-box__price {
@@ -623,6 +731,7 @@ section {
   margin-right: 1rem;
   font-size: 3rem;
   display: flex;
+  color: var(--title-color);
 }
 .price-box__per {
   align-self: end;
@@ -636,7 +745,7 @@ section {
 .price-box__feature {
   padding: 0.5rem 0;
   font-family: var(--secondary-font);
-  color: var(--dark-blue);
+  color: var(--text-color);
 }
 .price-box__feature--not-avalible {
   text-decoration: line-through;

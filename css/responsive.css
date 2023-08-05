@@ -309,7 +309,7 @@
 }
 @media (min-width: 992px) {
   .price-box--recommanded {
-    border: 1px solid var(--red-color);
+    border: 1px solid var(--primary-color);
   }
   .price-boxes {
     justify-content: flex-start;

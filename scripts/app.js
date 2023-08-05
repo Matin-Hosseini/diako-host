@@ -8,6 +8,15 @@ const accordions = document.querySelectorAll(".accordion");
 const mainSections = document.querySelectorAll(".main-section");
 const navLinks = document.querySelectorAll(".nav-menu__link");
 
+//settings
+const settingsBtn = document.querySelector(".settings");
+
+//dark mode
+const darkModeButton = document.querySelector("#dark-mode-btn");
+
+//color palets
+const colorPalets = document.querySelectorAll(".coller-pallets span");
+
 //hamburger menu starts
 let hamburgerMenuOpen = false;
 hamburgerMenu.addEventListener("click", () => {
@@ -59,7 +68,7 @@ const activateLinksOnScroll = () => {
     let height = section.offsetHeight;
     let id = section.getAttribute("id");
 
-    if (top +5 >= offset && top < offset + height) {
+    if (top + 5 >= offset && top < offset + height) {
       navLinks.forEach((navLink) => {
         navLink.classList.remove("nav-menu__link--active");
         document
@@ -69,10 +78,40 @@ const activateLinksOnScroll = () => {
     }
   });
 };
-
-window.onload = activateLinksOnScroll
-window.onscroll = activateLinksOnScroll
-
-
-
 //click on nav links ends
+
+//settings starts
+settingsBtn.addEventListener("click", (e) => {
+  const { target } = e;
+  console.log(target);
+  settingsBtn.classList.toggle("open");
+});
+//settings ends
+
+//dark mode starts
+darkModeButton.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+  if (document.documentElement.classList.contains("dark")) {
+    darkModeButton.classList.replace("bi-sun", "bi-moon");
+  } else {
+    darkModeButton.classList.replace("bi-moon", "bi-sun");
+  }
+});
+
+//dark mode ends
+
+//color palets starts
+colorPalets.forEach((colorPalett) => {
+  colorPalett.style.background = colorPalett.dataset.color;
+  colorPalett.addEventListener("click", () => {
+    document.documentElement.style.setProperty(
+      "--primary-color",
+      colorPalett.dataset.color
+    );
+  });
+});
+
+//color palets ends
+
+window.onload = activateLinksOnScroll;
+window.onscroll = activateLinksOnScroll;
