@@ -226,18 +226,51 @@
 }
 @media (min-width: 768px) {
   .q-and-a {
-    background-image: url('./../assets/images/shapes-background.jpg');
+    background-image: url("./../assets/images/shapes-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     padding: 10rem 10rem 10rem 0;
     background-attachment: fixed;
-  
   }
   .q-and-a__white-background {
-   width: 70%;
+    width: 70%;
   }
 }
 /*  ---- q-and-a ends ----  */
+
+/*  ---- weblog starts ----  */
+
+@media (min-width: 768px) {
+  .blog {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .blog:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .blog__image {
+    width: 29rem;
+    height: 19.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .blogs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .blog {
+    flex-basis: 49.4%;
+    margin-bottom: 0;
+  }
+  .blog__image {
+    width: 20rem;
+    height: 13.3rem;
+  }
+}
+
+/*  ---- weblog ends ----  */
 
 /*  ---- contact-us starts ----  */
 
@@ -257,7 +290,6 @@
 /*  ---- price starts ----  */
 @media (max-width: 340px) {
   .price-box__per {
-    
     font-size: 1.5rem;
   }
 }

@@ -460,10 +460,6 @@ header {
 }
 
 /*  ---- accordion  starts ----  */
-.q-and-a__accordion {
-}
-.accordion {
-}
 .accordion__head {
   display: flex;
   justify-content: space-between;
@@ -492,13 +488,37 @@ header {
   overflow: hidden;
   transition: all var(--transition);
 }
-/*  ---- accordion  ends ----  */
-/*  ---- q-and-a  ends ----  */
+/*  ---- accordion ends ----  */
+/*  ---- q-and-a ends ----  */
+
+/*  ---- weblog starts ----  */
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 2rem;
+  transition: all var(--transition);
+}
+.blog__image img {
+  object-fit: cover;
+}
+.blog__date {
+  font-family: var(--secondary-font);
+  color: var(--red-color);
+}
+.blog__title {
+  font-family: "Mikhak-extra-bold";
+  color: var(--primary-color);
+}
+.blog__caption {
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+/*  ---- weblog ends ----  */
 
 /*  ---- contact us  starts ----  */
-
-.contact-us {
-}
 .contact-us__caption {
   text-align: center;
   font-family: var(--secondary-font);
