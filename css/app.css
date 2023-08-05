@@ -52,6 +52,9 @@ img {
   height: 100%;
   object-fit: contain;
 }
+section{
+  margin-bottom: 5rem;
+}
 
 .description {
   font-family: var(--secondary-font);
@@ -136,7 +139,7 @@ img {
 
 /*  ---- header nav starts ----  */
 
-header {
+.header {
   position: fixed;
   background-color: rgb(206, 230, 230);
   left: 0;
@@ -689,5 +692,23 @@ header {
   color: #fff;
 }
 /*  ---- newsletter ends ----  */
+
+/*  ---- footer starts ----  */
+.footer{
+  text-align: center
+}
+
+.footer__links a{
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: var(--primary-color)
+}
+
+.footer__creator{
+  color: var(--text-color);
+  font-family: var(--secondary-font)
+}
+
+/*  ---- footer ends ----  */
 
 @import "./responsive.css";

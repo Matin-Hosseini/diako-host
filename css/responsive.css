@@ -340,6 +340,17 @@
   }
 }
 
+@media (max-width: 576px) {
+  .newsletter__content{
+    position: static;
+    transform: translate(0,0);
+  }
+  .newsletter__form{
+    border: 1px solid var(--primary-color);
+  }
+  
+}
+
 @media (min-width: 576px) {
   .newsletter__svg {
     display: block;
