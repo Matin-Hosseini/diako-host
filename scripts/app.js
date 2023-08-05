@@ -17,6 +17,9 @@ const darkModeButton = document.querySelector("#dark-mode-btn");
 //color palets
 const colorPalets = document.querySelectorAll(".coller-pallets span");
 
+//arrow up
+const arrowUpBtn = document.querySelector(".arrow-up-btn");
+
 //hamburger menu starts
 let hamburgerMenuOpen = false;
 hamburgerMenu.addEventListener("click", () => {
@@ -113,5 +116,21 @@ colorPalets.forEach((colorPalett) => {
 
 //color palets ends
 
+//arrow up starts
+arrowUpBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+const showArrowUpBtn = () => {
+  window.scrollY > window.innerHeight
+    ? (arrowUpBtn.style.bottom = "2rem")
+    : (arrowUpBtn.style.bottom = "-5rem");
+};
+//arrow up ends
+
 window.onload = activateLinksOnScroll;
 window.onscroll = activateLinksOnScroll;
+
+window.addEventListener("scroll", () => {
+  showArrowUpBtn();
+});

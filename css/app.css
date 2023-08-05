@@ -244,6 +244,27 @@ section {
 }
 /*  ---- settings ends ----  */
 
+/*  ---- arrow up btn starts ----  */
+.arrow-up-btn {
+  position: fixed;
+  left: 2rem;
+  bottom: -5rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  z-index: 999;
+}
+.arrow-up-btn:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+/*  ---- arrow up btn ends ----  */
+
 /*  ---- header nav starts ----  */
 
 .header {
