@@ -24,22 +24,22 @@
           </div>
           <ul class="nav-menu">
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">خانه</a>
+              <a href="#home" class="nav-menu__link nav-menu__link--active">خانه</a>
             </li>
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">درباره ما</a>
+              <a href="#about-us" class="nav-menu__link">درباره ما</a>
             </li>
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">خدمات</a>
+              <a href="#services" class="nav-menu__link">خدمات</a>
             </li>
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">تعرفه ها</a>
+              <a href="#weblog" class="nav-menu__link">وبلاگ</a>
             </li>
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">وبلاگ</a>
+              <a href="#price" class="nav-menu__link">تعرفه ها</a>
             </li>
             <li class="nev-menu__item">
-              <a href="#" class="nav-menu__link">تماس با ما</a>
+              <a href="#contact-us" class="nav-menu__link">تماس با ما</a>
             </li>
           </ul>
 
@@ -76,7 +76,7 @@
       <!--header nav ends-->
     </header>
     <main>
-      <section class="home container">
+      <section class="home container main-section" id="home">
         <div class="home__content">
           <h1 class="home__title">
             ترکیب هنر و تکنولوژی و تجربه منحصر به فرد در زمینه وب و هاستینگ
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <section class="about-us">
+      <section class="about-us main-section" id="about-us">
         <div class="container">
           <div class="section-header">
             <p class="section-header__caption">ما کیستیم و چه کاری می کنیم؟</p>
@@ -173,7 +173,7 @@
         </div>
       </section>
 
-      <section class="services">
+      <section class="services main-section" id="services">
         <div class="container">
           <div class="section-header">
             <p class="section-header__caption">خدمات</p>
@@ -230,35 +230,26 @@
         </div>
       </section>
 
-      <section class="resume">
-        <div class="container">
-          <div class="section-header">
-            <p class="section-header__caption">نمونه کارها</p>
-            <h3 class="section-header__title">آثار واقعی از خلاقیت و ابتکار</h3>
-            <span class="section-header__line"></span>
-          </div>
+      <section class="resume__funfacts">
+        <div class="funfact">
+          <i class="fa-solid fa-face-smile-wink funfact__icon"></i>
+          <span class="funfact__amount">260,000</span>
+          <span class="funfact__title">مشتری راضی</span>
         </div>
-        <div class="resume__funfacts">
-          <div class="funfact">
-            <i class="fa-solid fa-face-smile-wink funfact__icon"></i>
-            <span class="funfact__amount">260,000</span>
-            <span class="funfact__title">مشتری راضی</span>
-          </div>
-          <div class="funfact">
-            <i class="fa-solid fa-download funfact__icon"></i>
-            <span class="funfact__amount">400,000</span>
-            <span class="funfact__title">دانلود</span>
-          </div>
-          <div class="funfact">
-            <i class="fa-solid fa-code funfact__icon"></i>
-            <span class="funfact__amount">78 میلیون</span>
-            <span class="funfact__title">خط کد</span>
-          </div>
-          <div class="funfact">
-            <i class="fa-solid fa-star funfact__icon"></i>
-            <span class="funfact__amount">4,9</span>
-            <span class="funfact__title">میانگین امتیازات</span>
-          </div>
+        <div class="funfact">
+          <i class="fa-solid fa-download funfact__icon"></i>
+          <span class="funfact__amount">400,000</span>
+          <span class="funfact__title">دانلود</span>
+        </div>
+        <div class="funfact">
+          <i class="fa-solid fa-code funfact__icon"></i>
+          <span class="funfact__amount">78 میلیون</span>
+          <span class="funfact__title">خط کد</span>
+        </div>
+        <div class="funfact">
+          <i class="fa-solid fa-star funfact__icon"></i>
+          <span class="funfact__amount">4,9</span>
+          <span class="funfact__title">میانگین امتیازات</span>
         </div>
       </section>
 
@@ -326,7 +317,7 @@
         </div>
       </section>
 
-      <section class="weblog">
+      <section class="weblog main-section" id="weblog">
         <div class="container">
           <div class="section-header">
             <p class="section-header__caption">وبلاگ</p>
@@ -406,7 +397,7 @@
         </div>
       </section>
 
-      <section class="price">
+      <section class="price main-section" id="price">
         <div class="container">
           <div class="section-header">
             <p class="section-header__caption">قیمت</p>
@@ -502,7 +493,7 @@
         </div>
       </section>
 
-      <section class="contact-us">
+      <section class="contact-us main-section" id="contact-us">
         <div class="container">
           <div class="section-header">
             <p class="section-header__caption">تماس با ما</p>

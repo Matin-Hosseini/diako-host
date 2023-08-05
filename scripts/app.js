@@ -4,6 +4,10 @@ const mobileMenu = document.getElementById("mobile-menu");
 //q-and-a accordion
 const accordions = document.querySelectorAll(".accordion");
 
+//click on nav links
+const mainSections = document.querySelectorAll(".main-section");
+const navLinks = document.querySelectorAll(".nav-menu__link");
+
 //hamburger menu starts
 let hamburgerMenuOpen = false;
 hamburgerMenu.addEventListener("click", () => {
@@ -46,3 +50,29 @@ const removeOpen = (accordionIndex) => {
 };
 
 //q-and-a accordion ends
+
+//click on nav links starts
+const activateLinksOnScroll = () => {
+  mainSections.forEach((section) => {
+    let top = window.scrollY;
+    let offset = section.offsetTop;
+    let height = section.offsetHeight;
+    let id = section.getAttribute("id");
+
+    if (top +5 >= offset && top < offset + height) {
+      navLinks.forEach((navLink) => {
+        navLink.classList.remove("nav-menu__link--active");
+        document
+          .querySelector(`.nav-menu__link[href*="${id}"]`)
+          .classList.add("nav-menu__link--active");
+      });
+    }
+  });
+};
+
+window.onload = activateLinksOnScroll
+window.onscroll = activateLinksOnScroll
+
+
+
+//click on nav links ends

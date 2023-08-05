@@ -52,8 +52,8 @@ img {
   height: 100%;
   object-fit: contain;
 }
-section{
-  margin-bottom: 5rem;
+section {
+  padding-top: 10rem;
 }
 
 .description {
@@ -244,11 +244,9 @@ section{
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 5rem);
-  margin-top: 10rem;
 }
 .home__content {
   flex-basis: 50%;
-
   text-align: center;
   margin-bottom: 6rem;
 }
@@ -694,19 +692,19 @@ section{
 /*  ---- newsletter ends ----  */
 
 /*  ---- footer starts ----  */
-.footer{
-  text-align: center
+.footer {
+  text-align: center;
 }
 
-.footer__links a{
+.footer__links a {
   font-size: 3rem;
   margin: 0 1rem;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
-.footer__creator{
+.footer__creator {
   color: var(--text-color);
-  font-family: var(--secondary-font)
+  font-family: var(--secondary-font);
 }
 
 /*  ---- footer ends ----  */
