@@ -444,8 +444,7 @@ header {
 /*  ---- resume  ends ----  */
 
 /*  ---- q-and-a  starts ----  */
-.q-and-a {
-}
+
 .q-and-a__white-background {
   background-color: #fff;
   padding: 2rem;
@@ -476,10 +475,11 @@ header {
   margin-bottom: 1.5rem;
 }
 .accordion__title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  color: var(--dark-blue);
 }
 .accordion__icon {
-  color: var(--dark-blue);
+  color: var(--red-color);
 }
 
 .accordion__description {

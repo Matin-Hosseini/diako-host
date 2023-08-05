@@ -213,6 +213,32 @@
 
 /*  ---- resume ends ----  */
 
+/*  ---- q-and-a starts ----  */
+@media (min-width: 400px) {
+  .accordion__title {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 576px) {
+  .accordion__title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .q-and-a {
+    background-image: url('./../assets/images/shapes-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10rem 10rem 10rem 0;
+    background-attachment: fixed;
+  
+  }
+  .q-and-a__white-background {
+   width: 70%;
+  }
+}
+/*  ---- q-and-a ends ----  */
+
 /*  ---- contact-us starts ----  */
 
 @media (min-width: 576px) {
