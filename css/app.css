@@ -643,4 +643,51 @@ header {
 }
 /*  ---- price ends ----  */
 
+/*  ---- newsletter starts ----  */
+.newsletter {
+  position: relative;
+}
+.newsletter__svg {
+  display: none;
+}
+.newsletter__content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.newsletter__title {
+  color: var(--text-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.newsletter__form {
+  display: flex;
+  background-color: #fff;
+  font-family: var(--secondary-font);
+  padding: 1rem;
+  border-radius: 10rem;
+  overflow: hidden;
+}
+.newsletter__form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+}
+.newsletter__form button {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 10rem;
+}
+.newsletter__form button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/*  ---- newsletter ends ----  */
+
 @import "./responsive.css";

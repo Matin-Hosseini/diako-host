@@ -322,3 +322,33 @@
   }
 }
 /*  ---- price ends ----  */
+
+/*  ---- newsletter starts ----  */
+@media (max-width: 400px) {
+  .newsletter__form {
+    flex-direction: column;
+  }
+  .newsletter__form {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .newsletter__form input {
+    padding: 1rem;
+  }
+  .newsletter__form button {
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .newsletter__svg {
+    display: block;
+  }
+  .newsletter__content {
+    width: 40rem;
+  }
+  .newsletter__form input {
+    font-size: 1.8rem;
+  }
+}
+/*  ---- newsletter ends ----  */
