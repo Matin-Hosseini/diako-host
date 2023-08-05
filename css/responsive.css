@@ -255,6 +255,12 @@
 /*  ---- contact-us ends ----  */
 
 /*  ---- price starts ----  */
+@media (max-width: 340px) {
+  .price-box__per {
+    
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: 768px) {
   .price-boxes {
     flex-direction: row;
