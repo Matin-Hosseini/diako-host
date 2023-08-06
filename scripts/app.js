@@ -96,23 +96,40 @@ darkModeButton.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
   if (document.documentElement.classList.contains("dark")) {
     darkModeButton.classList.replace("bi-sun", "bi-moon");
+    localStorage.setItem("theme", "dark");
   } else {
     darkModeButton.classList.replace("bi-moon", "bi-sun");
+    localStorage.setItem("theme", "light");
   }
 });
 
+const setTheme = () => {
+  const theme = localStorage.getItem("theme");
+  if(!theme) return
+  document.documentElement.classList.add(theme);
+  if (document.documentElement.classList.contains("dark")) {
+    darkModeButton.classList.replace("bi-sun", "bi-moon");
+  }
+};
 //dark mode ends
 
-//color palets starts
+//color paletts starts
 colorPalets.forEach((colorPalett) => {
   colorPalett.style.background = colorPalett.dataset.color;
-  colorPalett.addEventListener("click", () => {
+  colorPalett.addEventListener("click", (e) => {
+    localStorage.setItem("color-palette", e.target.dataset.color);
     document.documentElement.style.setProperty(
       "--primary-color",
       colorPalett.dataset.color
     );
   });
 });
+
+const setColorPalette = () => {
+  const colorPalette = localStorage.getItem("color-palette");
+  if (!colorPalette) return;
+  document.documentElement.style.setProperty("--primary-color", colorPalette);
+};
 
 //color palets ends
 
@@ -128,9 +145,14 @@ const showArrowUpBtn = () => {
 };
 //arrow up ends
 
-window.onload = activateLinksOnScroll;
-window.onscroll = activateLinksOnScroll;
+window.addEventListener("load", () => {
+  activateLinksOnScroll();
+  setTheme();
+  setColorPalette();
+  showArrowUpBtn()
+});
 
 window.addEventListener("scroll", () => {
   showArrowUpBtn();
+  activateLinksOnScroll()
 });

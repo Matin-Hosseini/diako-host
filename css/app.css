@@ -5,9 +5,8 @@
   --secondary-font: "Mikhak";
 
   --app-bg-color: #f9f9f9;
-  --primary-color: #415678;
+  --primary-color: #9ED2BE;
   --title-color: #505050;
-  /* --text-color: #717e96; */
   --text-color: #505050;
   --red-color: #ee3158;
   --dark-color: #020312;
@@ -21,7 +20,6 @@
 
 :root.dark {
   --app-bg-color: #17202a;
-  --primary-color: #65aab5;
   --title-color: #00ccff;
   --text-color: #c0c0c0;
 }
