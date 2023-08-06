@@ -375,19 +375,17 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
   position: relative;
 }
-.nav-menu {
+/* .nav-menu {
   display: none;
-}
+} */
 
-.mobile-menu {
+.nav-menu {
   position: absolute;
   z-index: 9999999;
-  background-color: #fff;
-  top: 6.5rem;
+  background-color: #d8d9da;
+  top: 6.8rem;
   left: 0;
   right: 0;
   text-align: center;
@@ -395,14 +393,18 @@ section {
   overflow: hidden;
   transition: height 0.3s;
 }
-.mobile-menu__link {
+.nav-menu__link {
   display: block;
   font-family: var(--secondary-font);
   padding: 1rem 0;
-  color: var(--text-color);
+  color: var(--dark-blue);
 }
-.mobile-menu__link:hover {
+
+.nav-menu__link:hover {
   background-color: rgb(226, 226, 226);
+  color: var(--red-color);
+}
+.nav-menu__link--active {
   color: var(--red-color);
 }
 

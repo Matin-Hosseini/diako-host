@@ -41,24 +41,26 @@
   .nav-menu {
     display: flex;
     align-items: center;
+    position: static;
+    height: auto;
+    background-color: transparent;
   }
   .nav-menu__link {
     padding-right: 2rem;
     font-family: var(--secondary-font);
     color: #020312;
     position: relative;
-    transition: color 0.2s ease-in-out;
-    -webkit-transition: color 0.2s ease-in-out;
-    -moz-transition: color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
+    transition: color var(--transition-2);
+    background-color: transparent;
+    transition: all var(--transition-2);
   }
   .nav-menu__link:hover {
-    color: var(--red-color);
+    background-color: transparent;
   }
   .nav-menu__link--active {
     color: var(--red-color);
   }
+  
 }
 
 /*  ---- header nav ends ----  */

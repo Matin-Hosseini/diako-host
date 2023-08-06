@@ -1,5 +1,5 @@
 const hamburgerMenu = document.getElementById("hamburger-menu");
-const mobileMenu = document.getElementById("mobile-menu");
+const navMenu = document.getElementById("nav-menu");
 
 //q-and-a accordion
 const accordions = document.querySelectorAll(".accordion");
@@ -26,8 +26,8 @@ hamburgerMenu.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("nav-hamburger-menu--open");
   hamburgerMenuOpen = !hamburgerMenuOpen;
   hamburgerMenuOpen
-    ? (mobileMenu.style.height = `${mobileMenu.scrollHeight}px`)
-    : (mobileMenu.style.height = "0");
+    ? (navMenu.style.height = `${navMenu.scrollHeight}px`)
+    : (navMenu.style.height = "0");
 });
 //hamburger menu ends
 
@@ -63,7 +63,7 @@ const removeOpen = (accordionIndex) => {
 
 //q-and-a accordion ends
 
-//click on nav links starts
+//activates nav links on scroll and click on nav links starts
 const activateLinksOnScroll = () => {
   mainSections.forEach((section) => {
     let top = window.scrollY;
@@ -81,7 +81,16 @@ const activateLinksOnScroll = () => {
     }
   });
 };
-//click on nav links ends
+
+// for each of the nav links in mobile mode, if one of them is clicked, closes nav menu
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    hamburgerMenuOpen = false;
+    hamburgerMenu.classList.remove("nav-hamburger-menu--open");
+    navMenu.style.height = "0";
+  });
+});
+//activates nav links on scroll and click on nav links ends
 
 //settings starts
 settingsBtn.addEventListener("click", (e) => {
@@ -156,4 +165,11 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll", () => {
   showArrowUpBtn();
   activateLinksOnScroll();
+});
+
+//whtn testing for responsivness, if the screen gets bigger and nav menu is open after md media query nav menu height becomes normal
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    navMenu.style.height = "auto";
+  }
 });
