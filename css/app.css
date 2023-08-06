@@ -673,18 +673,19 @@ section {
 
 /*  ---- q-and-a  starts ----  */
 
-.q-and-a__white-background {
-  background-color: #fff;
+.q-and-a__wrapper {
+  background-color: var(--app-bg-color);
   padding: 2rem;
 }
 .q-and-a__content {
-  background-color: #fff;
+  background-color: var(--app-bg-color);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   padding: 2rem;
 }
 .q-and-a__title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--title-color);
 }
 
 /*  ---- accordion  starts ----  */
@@ -700,7 +701,7 @@ section {
 }
 .accordion__title {
   font-size: 1.4rem;
-  color: var(--dark-blue);
+  color: var(--primary-color);
 }
 .accordion__icon {
   color: var(--red-color);
