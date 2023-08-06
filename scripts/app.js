@@ -85,9 +85,11 @@ const activateLinksOnScroll = () => {
 // for each of the nav links in mobile mode, if one of them is clicked, closes nav menu
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", () => {
-    hamburgerMenuOpen = false;
-    hamburgerMenu.classList.remove("nav-hamburger-menu--open");
-    navMenu.style.height = "0";
+    if (window.innerWidth < 768) {
+      hamburgerMenuOpen = false;
+      hamburgerMenu.classList.remove("nav-hamburger-menu--open");
+      navMenu.style.height = "0";
+    }
   });
 });
 //activates nav links on scroll and click on nav links ends
@@ -171,5 +173,7 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     navMenu.style.height = "auto";
+  }else{
+    navMenu.style.height = "0"
   }
 });
