@@ -105,7 +105,7 @@ darkModeButton.addEventListener("click", () => {
 
 const setTheme = () => {
   const theme = localStorage.getItem("theme");
-  if(!theme) return
+  if (!theme) return;
   document.documentElement.classList.add(theme);
   if (document.documentElement.classList.contains("dark")) {
     darkModeButton.classList.replace("bi-sun", "bi-moon");
@@ -146,13 +146,14 @@ const showArrowUpBtn = () => {
 //arrow up ends
 
 window.addEventListener("load", () => {
-  activateLinksOnScroll();
   setTheme();
   setColorPalette();
-  showArrowUpBtn()
+  document.querySelector(".loader").classList.add("hide");
+  activateLinksOnScroll();
+  showArrowUpBtn();
 });
 
 window.addEventListener("scroll", () => {
   showArrowUpBtn();
-  activateLinksOnScroll()
+  activateLinksOnScroll();
 });

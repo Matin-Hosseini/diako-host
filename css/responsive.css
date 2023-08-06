@@ -56,7 +56,7 @@
   .nav-menu__link:hover {
     color: var(--red-color);
   }
-  .nav-menu__link--active{
+  .nav-menu__link--active {
     color: var(--red-color);
   }
 }
@@ -344,14 +344,13 @@
 }
 
 @media (max-width: 576px) {
-  .newsletter__content{
+  .newsletter__content {
     position: static;
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
-  .newsletter__form{
+  .newsletter__form {
     border: 1px solid var(--primary-color);
   }
-  
 }
 
 @media (min-width: 576px) {

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="vendor/font-awesome-6.4.0.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
     <!--JAVASCRIPT links-->
     <script src="scripts/app.js" defer></script>
@@ -19,10 +21,9 @@
       <!--header nav starts-->
       <div class="container">
         <nav class="nav">
-          <div class="logo">
-            <!-- <img src="" alt=""> -->
-            <p>DIAKO</p>
-          </div>
+          <a href="#" class="logo">
+            <img src="assets/images/logo-no-background.png" alt="" />
+          </a>
           <ul class="nav-menu">
             <li class="nev-menu__item">
               <a href="#home" class="nav-menu__link nav-menu__link--active"
@@ -79,6 +80,10 @@
       <!--header nav ends-->
     </header>
     <main>
+      <div class="loader">
+        <div class="triple-spinner"></div>
+      </div>
+
       <div class="settings">
         <div class="setting__gear-icon-container">
           <i class="fa-solid fa-gear setting__icon"></i>
@@ -604,7 +609,9 @@
       </section>
     </main>
     <footer class="footer">
-      <a href="#" class="footer__title">DIAKO</a>
+      <a href="#" class="logo footer__logo">
+        <img src="assets/images/logo-no-background.png" alt="" />
+      </a>
       <div class="footer__links">
         <a href="#">
           <i class="fa-brands fa-instagram"></i>
@@ -621,6 +628,5 @@
 
     <!--JAVASCRIPT Files-->
     <script src="vendor/font-awesome-4.6.0.min.js"></script>
-    
   </body>
 </html>
