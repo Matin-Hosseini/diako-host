@@ -159,7 +159,6 @@ const showArrowUpBtn = () => {
 window.addEventListener("load", () => {
   setTheme();
   setColorPalette();
-  document.querySelector(".loader").classList.add("hide");
   activateLinksOnScroll();
   showArrowUpBtn();
 });
@@ -173,7 +172,11 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     navMenu.style.height = "auto";
-  }else{
-    navMenu.style.height = "0"
+  } else {
+    navMenu.style.height = "0";
   }
 });
+
+document.onreadystatechange = function () {
+  document.querySelector(".loader").classList.add("hide");
+};
